@@ -52,6 +52,8 @@
   "LinkHints.unhoverLast": "Stop hovering at last location",
   "Marks.activate": "Go to a mark",
   "Marks.activateCreate": "Create a new mark",
+  "TabMarks.create": "Mark the current tab with a key",
+  "TabMarks.goto": "Go to a marked tab",
   "Marks.clearGlobal": "Remove all global marks",
   "Marks.clearLocal": "Remove all local marks for this site",
   "Vomnibar.activate": "Open URL, bookmark, or history entry",

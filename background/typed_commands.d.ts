@@ -368,6 +368,8 @@ interface CmdNameIds {
   "Marks.activateCreateMode": kBgCmd.marksActivate
   "Marks.activateGoto": kBgCmd.marksActivate
   "Marks.activateGotoMode": kBgCmd.marksActivate
+  "TabMarks.create": kBgCmd.marksActivate
+  "TabMarks.goto": kBgCmd.marksActivate
   "Marks.clearGlobal": kBgCmd.clearMarks
   "Marks.clearLocal": kBgCmd.clearMarks
   "Vomnibar.activate": kBgCmd.showVomnibar

@@ -621,7 +621,7 @@ const defaultKeyMappings_: string =
   " H "    +AsC_("goBack")              +" i "      +AsC_("enterInsertMode") +" j "      +AsC_("scrollDown")          +
   " J "    +AsC_("previousTab")         +" K "      +AsC_("nextTab")         +" k "      +AsC_("scrollUp")            +
   " l "    +AsC_("scrollRight")         +" L "      +AsC_("goForward")       +" <a-m> "  +AsC_("toggleMuteTab")       +
-  " N "    +AsC_("performBackwardsFind")+" n "      +AsC_("performFind")     +" <a-n> "  +AsC_("performAnotherFind")  +
+  " N "    +AsC_("performBackwardsFind")+" n "      +AsC_("TabMarks.create") +" <a-n> "  +AsC_("performAnotherFind")  +
   " o "    +AsC_("Vomnibar.activate")   +" <a-p> "  +AsC_("togglePinTab")    +" r "      +AsC_("reload")              +
   " R "    +AsC_("reloadGivenTab")      +" <a-r> "  +AsC_("reloadTab")       +" <a-s-r> "+AsC_("reopenTab")           +
   " t "    +AsC_("createTab")           +" <a-t> "  +AsC_("createTab")       +" u "      +AsC_("scrollPageUp")        +
@@ -629,7 +629,8 @@ const defaultKeyMappings_: string =
   " W "    +AsC_("moveTabToNextWindow") +" x "      +AsC_("removeTab")       +" X "      +AsC_("restoreTab")          +
   " yt "   +AsC_("duplicateTab")        +" yy "     +AsC_("copyCurrentUrl")  +" <c-y> "  +AsC_("scrollUp")            +
   " zH "   +AsC_("scrollToLeft")        +" zL "     +AsC_("scrollToRight")   +" / "      +AsC_("enterFindMode")       +
-  " ` "    +AsC_("Marks.activate")      +" ^ "      +AsC_("visitPreviousTab")+" [[ "     +AsC_("goPrevious")          +
+  " ` "    +AsC_("Marks.activate")      +" ; "      +AsC_("TabMarks.goto")   +" ^ "      +AsC_("visitPreviousTab")   +
+  " [[ "   +AsC_("goPrevious")          +
   " ]] "   +AsC_("goNext")              +" << "     +AsC_("moveTabLeft")     +" >> "     +AsC_("moveTabRight")        +
   " b "    +AsC_("Vomnibar.activateBookmarks")             + " ge "    + AsC_("Vomnibar.activateUrl")                 +
   " gE "   +AsC_("Vomnibar.activateUrlInNewTab")           + " m "     + AsC_("Marks.activateCreate")                 +
@@ -693,6 +694,8 @@ export const availableCommands_: { readonly [key in kCName]: CommandsNS.Descript
   "Marks.activateCreateMode": [ kBgCmd.marksActivate, kCxt.bg, 0, { mode: "create" } ],
   "Marks.activateGoto": [ kBgCmd.marksActivate, kCxt.bg, 0 ],
   "Marks.activateGotoMode": [ kBgCmd.marksActivate, kCxt.bg, 0 ],
+  "TabMarks.create": [ kBgCmd.marksActivate, kCxt.bg, 0, { mode: "create", type: "tab", swap: true } ],
+  "TabMarks.goto": [ kBgCmd.marksActivate, kCxt.bg, 0, { mode: "goto", type: "tab", swap: true } ],
   "Marks.clearGlobal": [ kBgCmd.clearMarks, kCxt.bg, 1 ],
   "Marks.clearLocal": [ kBgCmd.clearMarks, kCxt.bg, 1, { local: true } ],
   "Vomnibar.activate": [ kBgCmd.showVomnibar, kCxt.bg, 0 ],
