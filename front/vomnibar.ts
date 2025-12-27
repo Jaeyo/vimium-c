@@ -694,6 +694,10 @@ var VCID_: string | undefined = VCID_ || "", VHost_: string | undefined = VHost_
         }
         return
       } else if (char === kChar.backspace) {
+        if (mainModifier === "m" && a.selection_ >= 0
+            && (a.completions_[a.selection_] as SuggestionEx | undefined)?.e === "tab") {
+          return a.onAction_(AllowedActions.remove)
+        }
         if (mainModifier > "a" || Build.OS & kBOS.MAC && (Build.OS === kBOS.MAC as number || !a.os_)
               && !key.includes("a-c-")) { // treat <a-c-***> on macOS as <a-***> on Windows
           // -2 is for https://www.reddit.com/r/firefox/comments/767bha/how_to_make_cmdbackspace_better_on_macos/
@@ -720,6 +724,12 @@ var VCID_: string | undefined = VCID_ || "", VHost_: string | undefined = VHost_
       if (mainModifier === "a") { a.keyResult_ = SimpleKeyResult.Nothing; return; }
     }
     if (mainModifier === "c" || mainModifier === "m") {
+      if (mainModifier === "m" && focused
+          && (char === kChar.delete || char === kChar.backspace)
+          && a.selection_ >= 0
+          && (a.completions_[a.selection_] as SuggestionEx | undefined)?.e === "tab") {
+        return a.onAction_(AllowedActions.remove)
+      }
       if (char === kChar.c) {
         action = a.selection_ >= 0 && getSelection().type !== "Range"
             && (!(Build.BTypes & BrowserType.Firefox) && !(Build.BTypes & BrowserType.Chrome)
