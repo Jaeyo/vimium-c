@@ -59,6 +59,8 @@
   "LinkHints.unhoverLast": "模拟鼠标从上一次点击的对象上移出",
   "Marks.activate": "跳转到指定标记",
   "Marks.activateCreate": "创建一个新标记",
+  "TabMarks.create": "用按键标记当前标签页",
+  "TabMarks.goto": "跳转到已标记的标签页",
   "Marks.clearGlobal": "清理所有全局标记",
   "Marks.clearLocal": "清理当前网页下的所有标记",
   "Vomnibar.activate": "显示多功能搜索框",

@@ -53,6 +53,8 @@
   "LinkHints.unhoverLast": "Arrêter de survoler la dernier endroit",
   "Marks.activate": "Aller à un marque",
   "Marks.activateCreate": "Créer un nouveau marque",
+  "TabMarks.create": "Marquer l'onglet actuel avec une touche",
+  "TabMarks.goto": "Aller à un onglet marqué",
   "Marks.clearGlobal": "Retirer tous les marqueurs globaux",
   "Marks.clearLocal": "Retirer tous les marqueurs locaux pour le site",
   "Vomnibar.activate": "Ouvrir l'URL, le marque-page, ou l'entrée d'historique",

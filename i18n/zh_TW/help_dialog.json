@@ -59,6 +59,8 @@
   "LinkHints.unhoverLast": "模擬鼠標從上一次點擊的對象上移出",
   "Marks.activate": "跳轉到指定標記",
   "Marks.activateCreate": "創建一個新標記",
+  "TabMarks.create": "用按鍵標記當前分頁",
+  "TabMarks.goto": "跳轉到已標記的分頁",
   "Marks.clearGlobal": "清理所有全局標記",
   "Marks.clearLocal": "清理當前網頁下的所有標記",
   "Vomnibar.activate": "顯示多功能搜尋框",
